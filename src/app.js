@@ -11,14 +11,6 @@ import './styles/styles.scss';
 import 'react-dates/lib/css/_datepicker.css';
 
 const store = configureStore();
-store.dispatch(addExpense({ description: 'PS5', amount: 500 }));
-store.dispatch(addExpense({ description: 'PS3 Repairs', amount: 270 }));
-store.dispatch(addExpense({ description: 'PS2 Repairs', amount: 200 }));
-store.dispatch(setTextFilter('repair'));
-
-const state = store.getState();
-const visibleExpenses = getVisibleExpenses(state.expenses, state.filters);
-console.log(visibleExpenses);
 
 const jsx = (
   <Provider store={store}>
