@@ -51,3 +51,12 @@ test('should setup editExpense action for an expense that does not exist, then f
   const state = expensesReducer(defaultExpenses, action);
   expect(state).toEqual(defaultExpenses);
 });
+
+test('should setup setExpenses action', () => {
+  const action = {
+    type: 'SET_EXPENSES',
+    expenses: [expenses[0]],
+  };
+  const state = expensesReducer(expenses, action);
+  expect(state).toEqual([expenses[0]]);
+});
