@@ -29,7 +29,8 @@ export default class ExpenseForm extends React.Component {
       this.setState(() => ({ amount }));
   };
   onDateChange = (createdAt) => {
-    this.setState(() => ({ createdAt }));
+    if (createdAt)
+	  this.setState(() => ({ createdAt }));
   };
   onFocusChange = ({ focused }) => {
     this.setState(() => ({ calendarFocused: focused }));
@@ -57,14 +58,14 @@ export default class ExpenseForm extends React.Component {
         <form onSubmit={this.onSubmit}>
           <input
             type="text"
-            placeHolder="Description"
+            placeholder="Description"
             autoFocus
             value={this.state.description}
             onChange={this.onDescriptionChange}
           />
           <input
             type="text"
-            placeHolder="Amount"
+            placeholder="Amount"
             value={this.state.amount}
             onChange={this.onAmountChange}
           />

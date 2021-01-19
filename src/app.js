@@ -19,7 +19,7 @@ const jsx = (
     <AppRouter />
   </Provider>
 );
-const hasRendered = false;
+let hasRendered = false;
 const renderApp = () => {
   if (!hasRendered) {
     ReactDOM.render(jsx, document.getElementById('app'));
