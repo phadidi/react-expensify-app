@@ -1,0 +1,17 @@
+.page-header-layout {
+  background: $off-white;
+  margin-bottom: $l-size;
+  padding: $l-size 0;
+}
+
+.page-header-layout__title {
+  margin: $m-size;
+}
+
+.page-header-layout__actions {
+  font-weight: 300;
+  margin: 0;
+  span {
+    font-weight: bold;
+  }
+}
